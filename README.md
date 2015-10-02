@@ -1,28 +1,17 @@
-== README
+#Reddit App (Reddittiyapp)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Software information
+Ruby version 2.2.1
+Rails version 4.2.4
 
-Things you may want to cover:
+##Description
+This app is a style of news posting app similar to Reddit. Users can post links to the app and are promoted up or down depending on the popular votes of other users. Posted links can have comments from the original poster and other authorized (logged-in) posters.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##Instructions
+To run the app, navigate to `heroku.com`
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Features
+
+##Supporting documentation
+UMLS and sketches
