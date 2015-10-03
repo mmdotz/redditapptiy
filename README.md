@@ -9,6 +9,8 @@ This app is a style of news posting app similar to Reddit. Users can post links 
 
 ##Instructions
 To run the app, navigate to `https://redditapptiy.herokuapp.com/`
+YOU MUST HAVE A USER ACCOUNT TO ACCESS THE APP.
+navigate to
 
 
 ##Features

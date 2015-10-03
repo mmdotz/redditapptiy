@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Posts</h1>
+<h1>Welcome to the POSTS viewing page</h1>
 
 <table>
   <thead>
@@ -15,9 +14,9 @@
   <tbody>
     <% @posts.order(num_votes: :desc).each do |post| %>
       <tr>
-        <td><%= post.url %></td>
+        <td><%= link_to "#{post.url}" %></td>
         <td><%= post.num_votes %></td>
-        <td><%= post.user %></td>
+        <td><%= post.user.username %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>

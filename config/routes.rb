@@ -1,15 +1,4 @@
 Rails.application.routes.draw do
-  get 'sessions/index'
-
-  get 'sessions/show'
-
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/update'
-
-  get 'sessions/destroy'
 
   resources :votes
   resources :posts
@@ -19,6 +8,6 @@ Rails.application.routes.draw do
   post '/login',      to: 'sessions#create',  as: 'create_session'
   delete '/logout',   to: 'sessions#destroy', as: 'logout'
 
-  root 'posts#index'
+  root 'sessions#new'
 
 end
