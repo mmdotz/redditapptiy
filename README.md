@@ -8,7 +8,7 @@ Rails version 4.2.4
 This app is a style of news posting app similar to Reddit. Users can post links to the app and are promoted up or down depending on the popular votes of other users. Posted links can have comments from the original poster and other authorized (logged-in) posters.
 
 ##Instructions
-To run the app, navigate to `heroku.com`
+To run the app, navigate to `https://redditapptiy.herokuapp.com/`
 
 
 ##Features
