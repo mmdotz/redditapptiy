@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   post '/login',      to: 'sessions#create',  as: 'create_session'
   delete '/logout',   to: 'sessions#destroy', as: 'logout'
 
+  put '/increment_vote/:id',     to: 'posts#increment_votes',     as: 'increment_vote'
+
   root 'sessions#new'
 
 end

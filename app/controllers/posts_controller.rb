@@ -13,12 +13,13 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+      @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
   end
+
 
   # POST /posts
   def create
@@ -33,19 +34,28 @@ class PostsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /posts/1
-  def update
-    respond_to do |format|
-      if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
-    end
+
+  def increment_votes
+    post = Post.find(params[:id])
+    post.num_votes +=1
+    redirect_to posts_path
+    post.save
   end
 
+
+  # PATCH/PUT /posts/1
+  # def update
+  #   @post.num_votes +=1
+  #   @post.num_votes.save
+  #     #   respond_to do |format|
+  #     #   format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+  #     # else
+  #     #   format.html { render :edit }
+  #     # end
+  #   # end
+  # end
+
   # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|

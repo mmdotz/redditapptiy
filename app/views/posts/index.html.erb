@@ -4,6 +4,7 @@
 <table>
   <thead>
     <tr>
+      <th>Post ID</th>
       <th>Url</th>
       <th>Num votes</th>
       <th>User</th>
@@ -14,12 +15,15 @@
   <tbody>
     <% @posts.order(num_votes: :desc).each do |post| %>
       <tr>
+        <td><%= post.id %></td>
         <td><%= link_to "#{post.url}" %></td>
         <td><%= post.num_votes %></td>
         <td><%= post.user.username %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Vote', increment_vote_path(post), method: :PUT %></td>
+
       </tr>
     <% end %>
   </tbody>
