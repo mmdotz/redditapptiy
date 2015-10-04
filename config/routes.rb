@@ -10,6 +10,6 @@ Rails.application.routes.draw do
 
   put '/increment_vote/:id',     to: 'posts#increment_votes',     as: 'increment_vote'
 
-  root 'sessions#new'
+  root 'posts#index'
 
 end

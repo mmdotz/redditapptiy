@@ -10,9 +10,7 @@
 
 <p id="notice"><%= notice %></p>
 
-
 <%= yield %>
 
-<!-- <%# link_to ("Logout", logout_path, method: :delete) if user_logged_in? %>  use after creating login -->
-</body>
+ <%= link_to "Logout", logout_path, method: :delete if user_logged_in? %>
 </html>

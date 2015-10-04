@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
+    authenticate_user
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -36,24 +37,13 @@ class PostsController < ApplicationController
 
 
   def increment_votes
+    # authenticate_user
     post = Post.find(params[:id])
     post.num_votes +=1
-    redirect_to posts_path
+    redirect_to root_path
     post.save
   end
 
-
-  # PATCH/PUT /posts/1
-  # def update
-  #   @post.num_votes +=1
-  #   @post.num_votes.save
-  #     #   respond_to do |format|
-  #     #   format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-  #     # else
-  #     #   format.html { render :edit }
-  #     # end
-  #   # end
-  # end
 
   # DELETE /posts/1
   def destroy

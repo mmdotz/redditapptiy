@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  # skip_before_filter :authenticate_user
+  skip_before_filter :authenticate_user
 
   def new  #login page
   end
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy  #logout
     session[:logged_in_users_id] = nil
-    redirect_to root_path, notice = "You have logged out"
+    redirect_to root_path, notice: "You have logged out"
   end
 
   private
