@@ -10,10 +10,14 @@ This app is a style of news posting app similar to Reddit. Users can post links 
 ##Instructions
 To run the app, navigate to `https://redditapptiy.herokuapp.com/`
 YOU MUST HAVE A USER ACCOUNT TO ACCESS THE APP.
-navigate to
+
 
 
 ##Features
 
 ##Supporting documentation
 UMLS and sketches
+
+##Michelle's notes:
+add a default to num votes for new links - otherwise breaks on up votes
+

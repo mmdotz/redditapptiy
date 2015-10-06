@@ -40,8 +40,8 @@ class PostsController < ApplicationController
     # authenticate_user
     post = Post.find(params[:id])
     post.num_votes +=1
-    redirect_to root_path
     post.save
+    redirect_to root_path
   end
 
 
