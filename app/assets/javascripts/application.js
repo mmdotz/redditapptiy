@@ -18,16 +18,15 @@
 
 $(document).ready(function () {
 
-
   $('.highlight').click(function () {
-    $( '#toggle' ).toggle( 'highlight' )
+    $( '#toggle' ).toggle.this.( 'highlight' )
   });
 
 });
-
-JS:
-var hiButton = document.getElementbyId('button');
-function highlight() {
-  //the highlight function;
-}
-button.addEventListener('click', highlight());
+//
+// JS:
+// var hiButton = document.getElementbyId('button');
+// function highlight() {
+//   //the highlight function;
+// }
+// button.addEventListener('click', highlight());
