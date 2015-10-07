@@ -15,5 +15,19 @@
 //= require turbolinks
 //= require_tree .
 
-$( document ).ready
-$( '<button>Highlight the first line</button>' )
+
+$(document).ready(function () {
+
+
+  $('.highlight').click(function () {
+    $( '#toggle' ).toggle( 'highlight' )
+  });
+
+});
+
+JS:
+var hiButton = document.getElementbyId('button');
+function highlight() {
+  //the highlight function;
+}
+button.addEventListener('click', highlight());
