@@ -14,7 +14,13 @@
  *= require_self
  */
 
- #toggle {
- background-color: yellow;
- display: none;
+//this only toggles the actual element, trying to toggle color on click
+ .highlight {
+   background-color: yellow;
  }
+ //also tried
+ //
+ // .color {
+ // background-color: yellow;
+ // display: none;
+ // }

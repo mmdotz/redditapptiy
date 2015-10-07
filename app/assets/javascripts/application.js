@@ -17,16 +17,9 @@
 
 
 $(document).ready(function () {
-
-  $('.highlight').click(function () {
-    $( '#toggle' ).toggle.this.( 'highlight' )
+  $('.toggle-highlight').click(function () {
+    $(this).parent().find('.toggle').toggleClass('highlight');
   });
-
 });
-//
-// JS:
-// var hiButton = document.getElementbyId('button');
-// function highlight() {
-//   //the highlight function;
-// }
-// button.addEventListener('click', highlight());
+
+//for the highlight button, when clicked go to the parent element and find the toggle class and apply css to class 'highlight'

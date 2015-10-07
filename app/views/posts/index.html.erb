@@ -16,17 +16,20 @@
     <% @posts.order(num_votes: :desc).each do |post| %>
       <tr>
         <td><%= post.id %></td>
-        <td id="toggle"><%= link_to "#{post.url}" %></td>
+        <td class="toggle"><%= link_to "#{post.url}" %></td>
         <td><%= post.num_votes %></td>
         <td><%= post.user.username %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><% if user_logged_in? %>
-        <%= link_to 'Vote', increment_vote_path(post), method: :PUT %></td>
-        <% end %>
-        <td class="highlight"><%= link_to 'Highlight', posts_path %></td>
-
+        <td>
+          <% if user_logged_in? %>
+            <%= link_to 'Vote', increment_vote_path(post), method: :PUT %>
+          <% end %>
+        </td>
+        <!-- /*<style class="color">*/ -->
+        <td class="toggle-highlight"><%= link_to 'Highlight', '#' %></td>
+        <!-- /*</style>*/ -->
       </tr>
     <% end %>
   </tbody>
