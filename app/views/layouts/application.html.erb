@@ -15,9 +15,9 @@
  <%= link_to "Logout", logout_path, method: :delete if user_logged_in? %>
 
 
-<!--
+
  <p>current_user:<%= current_user.inspect %><br>
- <%= params.inspect if Rails.env.development? %></p> -->
+ <%= params.inspect if Rails.env.development? %></p>
 
  <footer>
      <%= "User logged in: #{current_user.username}" if current_user %>
