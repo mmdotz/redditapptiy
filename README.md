@@ -20,5 +20,5 @@ To login, use existing user `Melanie` and password `password` or create your own
 UMLS and sketches
 
 ##Michelle's notes:
-add a default to num votes for new links - otherwise breaks on up votes
-
+-USer id is nil for new post
+-Login is always nil, despite before_filter -for current user setting
