@@ -3,4 +3,3 @@ class AddDefaultToUsers < ActiveRecord::Migration
     change_column_default :users, :password_digest, :null => false
   end
 end
-

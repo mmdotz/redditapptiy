@@ -22,4 +22,5 @@ $(document).ready(function () {
   });
 });
 
+
 //for the highlight button, when clicked go to the parent element and find the toggle class and apply css to class 'highlight'

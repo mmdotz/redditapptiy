@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   # before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user
+
 
   # GET /posts
   def index
@@ -23,18 +25,20 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
-    authenticate_user
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to posts_path, notice: 'Post was successfully created.' }
+        format.json { render :index, status: :created, location: @posts } #is this correct?
+
       else
         format.html { render :new }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
-
 
   def increment_votes
     # authenticate_user
