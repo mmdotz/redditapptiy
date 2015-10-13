@@ -21,12 +21,10 @@
         <td><%= post.user.username %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <% if user_logged_in? %>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td>
-          <% if user_logged_in? %>
-            <%= link_to 'Vote', increment_vote_path(post), method: :PUT %>
+        <td><%= link_to 'Vote', increment_vote_path(post), method: :PUT %></td>
           <% end %>
-        </td>
         <td class="toggle-highlight"><%= link_to 'Highlight', '#' %></td>
       </tr>
     <% end %>

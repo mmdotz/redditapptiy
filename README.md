@@ -18,7 +18,3 @@ To login, use existing user `Melanie` and password `password` or create your own
 
 ##Supporting documentation
 UMLS and sketches
-
-##Michelle's notes:
--USer id is nil for new post
--Login is always nil, despite before_filter -for current user setting

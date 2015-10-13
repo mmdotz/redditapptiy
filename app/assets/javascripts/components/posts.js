@@ -5,11 +5,11 @@ $.ajax({
   dataType: 'JSON',
   data: {
     post: {
-      body: $('#post_body').val(),
+      url: $('#post_url').val(),
     }
   },
   success: function (response) {
-    $('#post_body').val('');
+    $('#post_url').val('');
     $('.field').prepend('<p>Link posted!</p>');
   }
  });
